@@ -1,0 +1,46 @@
+{
+  "features": [
+    "BMI",
+    "HighBP",
+    "HighChol",
+    "Smoker",
+    "PhysActivity",
+    "HvyAlcoholConsump",
+    "GenHlth",
+    "Age",
+    "Sex"
+  ],
+  "target": "diabetes_binary (Diabetes_012 > 0)",
+  "best_model": "HistGB",
+  "best_params": {
+    "clf__max_leaf_nodes": 31,
+    "clf__max_iter": 200,
+    "clf__max_depth": 4,
+    "clf__learning_rate": 0.03,
+    "clf__l2_regularization": 0
+  },
+  "chosen_threshold_best_f1": 0.63,
+  "metrics": {
+    "AUC": 0.8186,
+    "AvgPrec": 0.453,
+    "BalancedAcc": 0.7404,
+    "F1": 0.4611,
+    "Accuracy": 0.7121,
+    "Brier": 0.1793
+  },
+  "cv_summary": {
+    "LogReg": {
+      "cv_auc_mean": 0.8123,
+      "cv_auc_std": 0.0063
+    },
+    "RandomForest": {
+      "cv_auc_mean": 0.7389,
+      "cv_auc_std": 0.0066
+    },
+    "HistGB": {
+      "cv_auc_mean": 0.8156,
+      "cv_auc_std": 0.0054
+    }
+  },
+  "positive_rate": 0.1576
+}
